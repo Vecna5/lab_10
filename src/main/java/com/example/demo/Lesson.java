@@ -1,5 +1,7 @@
 package com.example.demo;
 
+import javax.validation.constraints.NotEmpty;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -7,13 +9,21 @@ import jakarta.persistence.Id;
 
 @Entity
 public class Lesson {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
+    @NotEmpty(message = "Name cannot be empty")
     private String name;
+
+    @NotEmpty(message = "Teacher cannot be empty")
     private String teacher;
+
+    @NotEmpty(message = "Day cannot be empty")
     private String day;
+
+    @NotEmpty(message = "Time cannot be empty")
     private String time;
 
     public Lesson() {}

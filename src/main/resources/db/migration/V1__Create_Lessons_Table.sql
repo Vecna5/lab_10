@@ -1,0 +1,7 @@
+CREATE TABLE lessons (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    teacher VARCHAR(100) NOT NULL,
+    day VARCHAR(20) NOT NULL,
+    time VARCHAR(5) NOT NULL
+);
